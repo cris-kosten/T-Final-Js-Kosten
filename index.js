@@ -49,6 +49,24 @@ btnModalCarrito.addEventListener('click', function(){
     modal.show();// con show lo abris 
 });
 
+btnSave.addEventListener('click', () => {
+
+    modal.hide();
+    Swal.fire({
+        imageUrl: "./img/logo.jpg",
+        imageWidth: 125,
+        imageHeight: 125,
+        imageAlt: "Logo",
+        title: "Tienda Coder",
+        text: "Compra Realizada con Exito",
+        icon: "success",
+        confirmButtonText: 'Gracias por Elegirnos'
+    });
+
+    localStorage.removeItem('cart');
+} )
+
+
 btnClose.addEventListener('click', () => {
     modal.hide();// con Hide lo cerras 
 });
@@ -128,6 +146,30 @@ const addToCart = (e )=> {
     // mostramos la cantidad d elementos del carro
     cart.addToCart(product);
     cartCount.innerText = cart.getCount();
+
+    // ejemplos de librerias toastify
+    /*Toastify({
+        text: "Hi",
+        duration: 4500,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        gravity: "top",
+        position: 'left',
+    }).showToast();*/
+
+    //libreria toastify
+    Toastify({
+        text: "Producto Agregado al Carrito",
+        
+        duration: 3500,
+        gravity: 'bottom',
+        position: 'right',
+        close: true,
+        style: {
+            background: "linear-gradient(to right, #560e86, #0a0011)",
+        },
+        
+        }).showToast();
     
 }   
 const redenCart = ( list ) => {
