@@ -72,39 +72,51 @@ img {
 
 img:hover {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    height: auto;
     translate: 0px 5px;
-    transform: scale(1);
+    transform: scale(1.2);
+    transition: 0.8s;
     z-index: 2;
 }
+/*   --- probando nuevos estidos para las cards  */
+
+
+/*   --- probando nuevos estidos para las cards  */
+
 
 .card {
-
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
+    overflow: hidden;
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     margin: 30px;
     margin-bottom: 20px;
     background-size: cover;
-    background-color: bisque;
-    color: black;
+    /*background-color: rgb(244, 196, 255);*/
+    background-color: beige;
+    color: darkblue;
     text-align: center;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 20px 10px rgba(0.5, 0.7, 0.5, 1);
     border-radius: 4px;
-    transition: 200ms;
+    transition: 400ms;
 }
 
 .card {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.088);
     border-radius: 4px;
     transition: 200ms;
 }
 
 .card:hover {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px rgba(1, 1, 1, 0.726);
     translate: 0px -5px;
     transform: scale(1.1);
     z-index: 2;
@@ -113,6 +125,7 @@ img:hover {
 .card img {
     max-width: 100%;
     aspect-ratio: 1.5;
+    max-height: auto;
 }
 
 
@@ -138,7 +151,7 @@ img:hover {
 }
 
 .btn-detalle {
-    color: rgb(46, 66, 180);
+    color: rgb(46, 64, 180);
     cursor: pointer;
 }
 
@@ -149,116 +162,6 @@ img:hover {
 
 
 /* --------------  Loader  --------------------------*/
-
-/*#loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    overflow: hidden;
-}
-
-#loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid black;
-    border-top-color: #16a085;
-    animation: spin 1.7s linear infinite;
-    z-index: 11;
-}
-
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid blue;
-    border-top-color: #e74c3c;
-    animation: spin-reverse 1s linear infinite;
-}
-
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #f9c922;
-    animation: spin 1.3s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes spin-reverse {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-#loader-wrapper .loader-section {
-    position: fixed;
-    top: 0;
-    width: 51%;
-    height: 100%;
-    z-index: 10;
-}
-
-#loader-wrapper .loader-section.section-left {
-    left: 0;
-}
-
-#loader-wrapper .loader-section.section-right {
-    right: 0;
-}
-
-/* Loaded styles */
-/*.loaded #loader-wrapper .loader-section.section-left {
-    transform: translateX(-100%);
-    transition: all 1s 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader-wrapper .loader-section.section-right {
-    transform: translateX(100%);
-    transition: all 1s 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.loaded #loader {
-    opacity: 0;
-    transition: all 1s ease-out;
-}
-
-.loaded #loader-wrapper {
-    visibility: hidden;
-    transform: translateY(-100%);
-    transition: all 1.3s 1s ease-out;
-}*/
-
 
 footer {
     background: -webkit-radial-gradient(#560e86, #0a0011);

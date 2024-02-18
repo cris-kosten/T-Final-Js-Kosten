@@ -33,7 +33,7 @@
 
         {"id":16 , "name": "IA - Marketing.D", "price":  325, "img": "./img/IA02.jpg", "id_category": 3, "duracion": "7 semanas (2hs semanales)", "modalidad": "100% Online"},
 
-        {"id":17 , "name": "IA -Engineering ", "price":  175, "img": "./img/IA01.jpg", "id_category": 3, "duracion": "4 semanas (2hs semanales)", "modalidad": "100% Online"},
+        {"id":17 , "name": "IA ingenieria ", "price":  175, "img": "./img/IA01.jpg", "id_category": 3, "duracion": "4 semanas (2hs semanales)", "modalidad": "100% Online"},
 
         {"id":18 , "name": "Ilustración Digital", "price":  285, "img": "./img/ilustracion.jpg", "id_category": 4, "duracion": "6 semanas (2hs semanales)", "modalidad": "100% Online"},
 
