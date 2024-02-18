@@ -31,10 +31,6 @@ const btnSave = document.querySelector('#btnSave');
 //
 const btnOrder = document.querySelector('#btnOrder');
 
-
-
-
-
 //----------------------------------------------------------------------//
 
 let carrito = {};
@@ -42,7 +38,7 @@ let carrito = {};
 let products_list = [];
 
 //de este modo al actualizar la pag los elementos seleccionados quedan guardado en el carrito
-const listCart = JSON.parse(localStorage.getItem('cart') ) || [];
+const listCart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // carrito de compras
 const cart = new Cart(listCart);
@@ -52,19 +48,19 @@ const cart = new Cart(listCart);
 cartCount.innerText = cart.getCount();
 
 // button carrito ! seleccion u agregar
-btnModalCarrito.addEventListener('click', function(){
+btnModalCarrito.addEventListener('click', function () {
     const list = cart.getProducts();
 
     cartSum.innerText = cart.getSum();
-    redenCart(list );
-    modal.show();// con show lo abris 
+    redenCart(list);
+    modal.show(); // con show lo abris 
 });
 // Trabajamos en el carrito cuando Damos Aceptar la compra!
 btnSave.addEventListener('click', () => {
 
     modal.hide();
     Swal.fire({
-        
+
         width: '400px',
         background: '-webkit-radial-gradient(#560e86, #0a0011)',
         color: 'orange',
@@ -81,68 +77,68 @@ btnSave.addEventListener('click', () => {
     });
 
     localStorage.removeItem('cart');
-} )
+})
 
 
 btnClose.addEventListener('click', () => {
-    modal.hide();// con Hide lo cerras 
+    modal.hide(); // con Hide lo cerras 
 });
 
 // ------------------ trabajamos con la barra de BUSCAR/BUSCADOR -------------//
-inputSearch.addEventListener('input', (event) =>{
+inputSearch.addEventListener('input', (event) => {
 
     const search = event.target.value; // inputSearch.value
     //busca las palabras relacionadas con nuestro producto!
-    const newList= products_list.filter(  (products) => products.name.toLowerCase().includes(search.toLowerCase () ));
+    const newList = products_list.filter((products) => products.name.toLowerCase().includes(search.toLowerCase()));
 
     renderProducts(newList);
-    
+
 });
 
 //----- categorias de la barra de busqueda --- //
-selectCategory.addEventListener('change', (e) =>{
+selectCategory.addEventListener('change', (e) => {
     const id_category = selectCategory.value;
     console.log('categoria', id_category);
 
-    filtroCategoria ( id_category);
+    filtroCategoria(id_category);
 })
 
 // -------------------Trabajamos con el btnOrder / ordenas la lista -----------------//
 // ------ ordenando de menor a mayor precio
 
 
-btnOrder.addEventListener('click', () =>{
+btnOrder.addEventListener('click', () => {
     console.log('Ordenando los cursos de menor a mayor precio');
-    
-    products_list.sort(  ( a, b) =>{
+
+    products_list.sort((a, b) => {
         // ordenamos los precios de menor a mayor !! 
-        if( a.price < b.price ){
-            return -1            
+        if (a.price < b.price) {
+            return -1
         }
-        if( a.price > b.price){
+        if (a.price > b.price) {
             return 1
         }
 
         return 0;
     })
     //Ordenamos de menor a mayor precio los productos de la pagina!!!
-    renderProducts(products_list); 
-    btnOrder.setAttribute('disabled' ,true);
-    
+    renderProducts(products_list);
+    btnOrder.setAttribute('disabled', true);
+
 })
- //--------------------Filtramos la categoria de los cursos seleccionado ----------//
-const filtroCategoria= ( id_category) => {
-    const newList = products_list.filter ( (product) => product.id_category == id_category);
+//--------------------Filtramos la categoria de los cursos seleccionado ----------//
+const filtroCategoria = (id_category) => {
+    const newList = products_list.filter((product) => product.id_category == id_category);
     renderProducts(newList);
     console.table(newList);
 }
 
-const renderProducts =(list)=> {
-    listProducts.innerHTML= '';
+const renderProducts = (list) => {
+    listProducts.innerHTML = '';
 
-    list.forEach(product =>{
+    list.forEach(product => {
         listProducts.innerHTML += //html
-        `<div class="col-sm-4 col-md-3   ">
+            `<div class="col-sm-4 col-md-3   ">
             <div class="card p-2">
                 <h4>${product.name}</h4>
                 <img class="img-fluid" src="${product.img}" alt="${product.name}">
@@ -154,10 +150,10 @@ const renderProducts =(list)=> {
         </div>
     </div>`
     })
-    
+
     const btns = document.querySelectorAll('.btnAddCart');
-    
-    btns.forEach(btn =>{
+
+    btns.forEach(btn => {
         //cada vez que el usuario hace click
         btn.addEventListener('click', addToCart);
     });
@@ -165,22 +161,22 @@ const renderProducts =(list)=> {
 
 //---------------------agrego el escuchador de eventos a los botones------------//
 
-    const btns = document.querySelectorAll('.btnAddCart');
-    
-    btns.forEach(btn =>{
-        //cada vez que el usuario hace click
-        btn.addEventListener('click', addToCart);
-    });
+const btns = document.querySelectorAll('.btnAddCart');
+
+btns.forEach(btn => {
+    //cada vez que el usuario hace click
+    btn.addEventListener('click', addToCart);
+});
 
 //carrito
-const addToCart = (e )=> {
+const addToCart = (e) => {
     //la funcion target especifica desde donde le estamos dando click
     console.log(e.target);
     const id = e.target.id;
 
-    
+
     // buscamos el producto y al dar click nos brinda toda la informacion del elemento
-    const product = products_list.find(  item => item.id == id);
+    const product = products_list.find(item => item.id == id);
     console.table(product); // muestra el producto con su contenido
 
     // mostramos la cantidad d elementos del carro
@@ -189,7 +185,7 @@ const addToCart = (e )=> {
 
     Toastify({
         text: "Producto Agregado al Carrito",
-        
+
         duration: 3500,
         gravity: 'bottom',
         position: 'right',
@@ -197,15 +193,15 @@ const addToCart = (e )=> {
         style: {
             background: "linear-gradient(to right, #560e86, #0a0011)",
         },
-        
-        }).showToast();
-    
-}   
-const redenCart = ( list ) => {
+
+    }).showToast();
+
+}
+const redenCart = (list) => {
     modalListProducts.innerHTML = '';
-    list.forEach( product =>{
+    list.forEach(product => {
         modalListProducts.innerHTML += //html
-        `<tr>
+            `<tr>
                 <th>${product.name}</th>
                 <th>${product.duracion}</th>
                 <th>${product.modalidad}</th>
@@ -216,28 +212,31 @@ const redenCart = ( list ) => {
 }
 
 // ------ solicitamos informacion del contenido de las categorias
-const renderCategory = (list) =>{
-    selectCategory.innerHTML= '';
-    list.forEach (category =>{
+const renderCategory = (list) => {
+    selectCategory.innerHTML = '';
+    list.forEach(category => {
         selectCategory.innerHTML += //html
-        `<option value="${category.id_category}">${category.name}</option>`
+            `<option value="${category.id_category}">${category.name}</option>`
     });
 }
 
 // hacemos una solicitud AJAX-> Fetch
-const getProducts = async () =>{
+const getProducts = async () => {
 
     try {
         const endPoint = 'data.json';
         const resp = await fetch(endPoint);
-    
+
         const json = await resp.json();
         console.log(json);
 
-        const { products, category } = json;
+        const {
+            products,
+            category
+        } = json;
         products_list = products;
         console.table(category);
-        renderProducts( products);
+        renderProducts(products);
         renderCategory(category);
 
     } catch (error) {

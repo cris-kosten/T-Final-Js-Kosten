@@ -1,31 +1,51 @@
 {
     "products":[
-        {"id":1 , "name": "Desarrollo Web", "price": 99120, "img": "./img/Desarrollo-web.jpg", "id_category": 1, "duracion": "10 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":1 , "name": "Desarrollo Web", "price": 100, "img": "./img/Desarrollo-web.jpg", "id_category": 1, "duracion": "10 semanas (4hs semanales)", "modalidad": "100% Online"},
 
-        {"id":2 , "name": "Ciber Seguridad", "price": 371400, "img": "./img/ciberSeguridad.jpg", "id_category": 1,"duracion": "7 semanas (4hs semanales)","modalidad": "100% Online"},
+        {"id":2 , "name": "Ciber Seguridad", "price": 370, "img": "./img/ciberSeguridad.jpg", "id_category": 1,"duracion": "7 semanas (4hs semanales)","modalidad": "100% Online"},
     
-        {"id":3 , "name": "JavaScript", "price": 100500, "img": "./img/javascript.jpg", "id_category": 1, "duracion": "9 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":3 , "name": "JavaScript", "price": 105, "img": "./img/javascript.jpg", "id_category": 1, "duracion": "9 semanas (4hs semanales)", "modalidad": "100% Online"},
     
-        {"id":4 , "name": "Python", "price": 525000, "img": "./img/python.jpg", "id_category": 1, "duracion": "13 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":4 , "name": "Python", "price": 525, "img": "./img/python.jpg", "id_category": 1, "duracion": "13 semanas (4hs semanales)", "modalidad": "100% Online"},
     
-        {"id":5 , "name": "Google Ads", "price": 175000, "img": "./img/google-ADS.jpg", "id_category": 2, "duracion": "6 semanas (4hs semanales)",
+        {"id":5 , "name": "Google Ads", "price":  175, "img": "./img/google-ADS.jpg", "id_category": 2, "duracion": "6 semanas (4hs semanales)",
         "modalidad": "100% Online"},
     
-        {"id":6 , "name": "Inteligencia Artificial", "price": 150000, "img": "./img/Inteligencia-A.jpg", "id_category": "3", "duracion": "4 semanas (2hs semanales)", "modalidad": "100% Online"},
+        {"id":6 , "name": "Inteligencia Artificial", "price":  150, "img": "./img/Inteligencia-A.jpg", "id_category": "3", "duracion": "4 semanas (2hs semanales)", "modalidad": "100% Online"},
     
-        {"id":7 , "name": "Java", "price": 430000, "img": "./img/java.jpg","id_category": 1, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":7 , "name": "Java", "price": 430, "img": "./img/java.jpg","id_category": 1, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
     
-        {"id":8 , "name": "Marketing Digital", "price": 120000, "img": "./img/marketing-digital.jpg", "id_category": 2, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":8 , "name": "Marketing Digital", "price":  120, "img": "./img/marketing-digital.jpg", "id_category": 2, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
     
-        {"id":9 , "name": "React Js", "price": 90000, "img": "./img/react-js.jpg", "id_category": 1, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
+        {"id":9 , "name": "React Js", "price":  90, "img": "./img/react-js.jpg", "id_category": 1, "duracion": "8 semanas (4hs semanales)", "modalidad": "100% Online"},
 
-        {"id":10 , "name": "SQL", "price": 475200, "img": "./img/sql.jpg", "id_category": 1, "duracion": "13 semanas (4hs semanales)","modalidad": "100% Online"},
+        {"id":10 , "name": "SQL", "price":  475, "img": "./img/sql.jpg", "id_category": 1, "duracion": "13 semanas (4hs semanales)","modalidad": "100% Online"},
     
-        {"id":11 , "name": "Testing QA", "price": 325000, "img": "./img/testingQA.jpg", "id_category": 1, "duracion": "7 semanas (4hs semanales)", "modalidad": "100% Online"}
+        {"id":11 , "name": "Testing QA", "price":  325, "img": "./img/testingQA.jpg", "id_category": 1, "duracion": "7 semanas (4hs semanales)", "modalidad": "100% Online"},
+
+        {"id":12 , "name": "Fotografia para RRSS", "price": 62, "img": "./img/fotografia.jpg", "id_category": 2, "duracion": "6 semanas (4hs semanales)", "modalidad": "100% Online"},
+
+        {"id":13 , "name": "Publicidad en Redes", "price":  110, "img": "./img/publicidad.jpg", "id_category": 2, "duracion": "9 semanas (4hs semanales)", "modalidad": "100% Online"},
+
+        {"id":14 , "name": "SEO", "price":  285, "img": "./img/seo.jpg", "id_category": 2, "duracion": "5 semanas (4hs semanales)", "modalidad": "100% Online"},
+
+        {"id":15 , "name": "Fundamentos de la IA", "price": 371, "img": "./img/IA.jpg", "id_category": 3, "duracion": "6 semanas (2hs semanales)", "modalidad": "100% Online"},
+
+        {"id":16 , "name": "IA - Marketing.D", "price":  325, "img": "./img/IA02.jpg", "id_category": 3, "duracion": "7 semanas (2hs semanales)", "modalidad": "100% Online"},
+
+        {"id":17 , "name": "IA -Engineering ", "price":  175, "img": "./img/IA01.jpg", "id_category": 3, "duracion": "4 semanas (2hs semanales)", "modalidad": "100% Online"},
+
+        {"id":18 , "name": "Ilustración Digital", "price":  285, "img": "./img/ilustracion.jpg", "id_category": 4, "duracion": "6 semanas (2hs semanales)", "modalidad": "100% Online"},
+
+        {"id":19 , "name": "Looker Studio", "price":  370, "img": "./img/looker.jpg", "id_category": 4, "duracion": "7 semanas (2hs semanales)", "modalidad": "100% Online"},
+
+        {"id":20 , "name": "Photoshop e Illustrator", "price":  110, "img": "./img/Photoshop.jpg", "id_category": 5, "duracion": "6 semanas (2hs semanales)", "modalidad": "100% Online"}
     ],
     "category" : [
         {"id_category": 1, "name": "Programacion y Desarrollo"},
-        {"id_category": 2, "name": "Marketing"},
-        {"id_category": 3, "name": "IA"}
+        {"id_category": 2, "name": "Marketing Digital"},
+        {"id_category": 3, "name": "IA"},
+        {"id_category": 4, "name": "Herramientas Digitales"},
+        {"id_category": 5, "name": "Diseño UX/UI"}
     ]
 }
