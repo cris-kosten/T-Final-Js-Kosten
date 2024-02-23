@@ -5,9 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*----------------------------------------------------------------------*/
 
-/*----------------------------------------------------------------------*/
 .title {
     color: orange;
     text-decoration: none;
@@ -78,10 +76,7 @@ img:hover {
     transition: 0.8s;
     z-index: 2;
 }
-/*   --- probando nuevos estidos para las cards  */
 
-
-/*   --- probando nuevos estidos para las cards  */
 
 
 .card {
@@ -99,7 +94,6 @@ img:hover {
     margin: 30px;
     margin-bottom: 20px;
     background-size: cover;
-    /*background-color: rgb(244, 196, 255);*/
     background-color: beige;
     color: darkblue;
     text-align: center;
@@ -131,13 +125,13 @@ img:hover {
 
 .card button {
     font-size: cover;
-    /*background-color: var(--color-acento);*/
     color: rgb(46, 66, 180);
     border-radius: 5px;
     padding: 5px 10px;
     color: #fff;
     border: unset;
     cursor: pointer;
+    
 }
 
 
